@@ -1,5 +1,3 @@
-/* wymagane jest utworzenie dwóch osobnych stylów CSS: znacząco zmieniające wygląd strony */
-
 body {
     font-family: 'Times New Roman', serif;
     background-color: #f9f9f9;
@@ -48,5 +46,5 @@ a:hover {
     color:  #bec660;
 }
 a:visited {
-    color: #38da14;
+    color: rgba(128, 9, 158);
 }
