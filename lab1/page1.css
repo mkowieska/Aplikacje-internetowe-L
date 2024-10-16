@@ -42,10 +42,11 @@ footer {
 .logo-images {
     float: left; 
     margin-right: 20px; 
-    height:autol
+    height:auto;
+    justify-content: center; 
 }
 
-.about-us-content::after {
+.welcome::after {
     content: ""; 
     display: table;
     clear: both; 
