@@ -1,33 +1,93 @@
 /* wymagane jest utworzenie dwóch osobnych stylów CSS: responsywne */
 
 body {
-
+    font-family: Bahnschrift, sans-serif;
+    margin: 10;
+    padding: 0;
+    background-color: rgba(128, 9, 158, 0.1);
 }
 
 header {
-
+    background-color: rgba(128, 9, 158);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-h1 {
-    
-}
-
-h2 {
-    
+h1, h2 {
+    margin: 0;
 }
 
 main {
-    
+    padding: 20px;
+}
+
+h3 {
+    color: rgba(128, 9, 158);
 }
 
 ul {
-    
+    list-style-type: circle;
+    padding-left: 20px;
 }
 
 footer {
-
+    background-color:rgba(128, 9, 158);
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
-@media () {
+a {  /* kolor linku */
+    color: rgb(238, 214, 244); 
+    text-decoration: white;
+}
+a:hover {
+    color: #ef5118;
+}
+a:visited {
+    color: #aeb6ed; 
+}
 
+/* @media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+} */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em; /* Further reduce title size for mobile */
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1.2em; /* Scale down section titles */
+    }
+
+    main {
+        padding: 10px; /* Smaller padding for mobile */
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+
+    footer {
+        padding: 5px;
+    }
 }

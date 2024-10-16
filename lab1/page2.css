@@ -1,29 +1,52 @@
 /* wymagane jest utworzenie dwóch osobnych stylów CSS: znacząco zmieniające wygląd strony */
-
+/* General styles */
 body {
-
+    font-family: 'Times New Roman', serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header {
-
+    background-color: #ff5733;
+    color: white;
+    padding: 30px;
+    text-align: left;
 }
 
 h1 {
-
+    font-size: 3em;
 }
 
 h2 {
-   
+    font-size: 1.5em;
 }
 
 main {
-
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 ul {
-    
+    list-style-type: square;
+    padding-left: 30px;
 }
 
 footer {
+    background-color: #444;
+    color: #eee;
+    text-align: right;
+    padding: 20px;
+}
 
+a {  /* kolor linku */
+    color: rgb(237, 18, 18); 
+    text-decoration: white;
+}
+a:hover {
+    color:  #bec660;
+}
+a:visited {
+    color: #38da14;
 }
