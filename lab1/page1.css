@@ -4,7 +4,7 @@ body {
     font-family: Bahnschrift, sans-serif;
     margin: 10;
     padding: 0;
-    background-color: rgba(128, 9, 158, 0.1);
+    
 }
 
 header {
@@ -14,8 +14,13 @@ header {
     padding: 20px;
 }
 
-h1, h2 {
+h1 {
     margin: 0;
+}
+
+h2 {
+    margin: 0;
+    font-style: italic;
 }
 
 main {
@@ -31,32 +36,21 @@ ul {
     padding-left: 20px;
 }
 
+section {
+    border: 2px dashed rgba(128, 9, 158); /* Styl przerywany, kolor niebieski */
+    padding: 20px; /* Wewnętrzne marginesy */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    margin-bottom: 20px; /* Odstęp poniżej sekcji */
+    background-color: rgba(128, 9, 158, 0.053);
+}
+
 footer {
+    border: 2px dotted #dbb4dd;
     background-color:rgba(128, 9, 158);
     color: white;
     text-align: center;
     padding: 10px;
 }
-
-
-.logo-images {
-    float: left; 
-    margin-right: 20px; 
-    height:auto;
-    justify-content: center; 
-}
-
-.welcome::after {
-    content: ""; 
-    display: table;
-    clear: both; 
-}
-
-.logo-images img {
-    width: 80px;
-    height: auto; 
-}
-
 
 .destination-images {
     display: flex; 
@@ -65,13 +59,11 @@ footer {
     margin-top: 20px; 
     justify-content: center; 
 }
-
 .destination-images img {
     width: 100%; 
     max-width: 350px; 
     height: auto; 
 }
-
 
 .review-images {
     display: flex; 
@@ -79,7 +71,6 @@ footer {
     gap: 10px; 
     margin-top: 10px; 
 }
-
 .review-images img {
     width: 100%; 
     max-width: 220px; 
@@ -88,14 +79,11 @@ footer {
 
 
 a {  /* kolor linku */
-    color: rgb(238, 214, 244); 
-    text-decoration: white;
+    color: rgb(221, 206, 222); 
+    font-weight: bold;
 }
 a:hover {
     color: #ef5118;
-}
-a:visited {
-    color: #aeb6ed; 
 }
 
 @media (max-width: 480px) {
