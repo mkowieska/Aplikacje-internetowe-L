@@ -38,11 +38,31 @@ footer {
     padding: 10px;
 }
 
+
+.logo-images {
+    float: left; 
+    margin-right: 20px; 
+    height:autol
+}
+
+.about-us-content::after {
+    content: ""; 
+    display: table;
+    clear: both; 
+}
+
+.logo-images img {
+    width: 80px;
+    height: auto; 
+}
+
+
 .destination-images {
     display: flex; 
     flex-wrap: wrap; 
     gap: 30px; 
     margin-top: 20px; 
+    justify-content: center; 
 }
 
 .destination-images img {
@@ -51,14 +71,15 @@ footer {
     height: auto; 
 }
 
-.destination-images-2 {
+
+.review-images {
     display: flex; 
     flex-wrap: wrap; 
     gap: 10px; 
     margin-top: 10px; 
 }
 
-.destination-images-2 img {
+.review-images img {
     width: 100%; 
     max-width: 220px; 
     height: auto; 
@@ -80,21 +101,20 @@ a:visited {
     header {
         padding: 10px;
     }
-
     h1 {
-        font-size: 1.8em; /* Further reduce title size for mobile */
+        font-size: 1.8em;
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     h3 {
-        font-size: 1.2em; /* Scale down section titles */
+        font-size: 1.2em; 
     }
 
     main {
-        padding: 10px; /* Smaller padding for mobile */
+        padding: 10px;
     }
 
     ul {
