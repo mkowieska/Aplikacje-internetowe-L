@@ -1,22 +1,36 @@
 body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Garamond', serif;
+    background-image: url('E:/projekty git 1/ai-uni-lab/lab1/pictures/pexels-tlo3-p2.jpg');
+    background-size: cover; 
+    background-position: center;
 }
 
 header {
-    background-color: #ff5733;
+    background-color: rgb(183, 25, 25);
     color: white;
     padding: 30px;
     text-align: left;
 }
 
 h1 {
-    font-size: 3em;
+    margin: 0;
+    font-size: 40px;
+    text-transform: uppercase;
 }
 
 h2 {
-    font-size: 1.5em;
+    margin: 0;
+    color: rgb(62, 61, 61);  
+}
+
+h3 {
+    font-size: 35px;
+    font-style: italic;
+    color: rgb(88, 2, 2);
+    text-align: center;
+    text-shadow: 
+    1px 1px 0 rgb(62, 61, 61),   
+    1px -1px 0 rgb(62, 61, 61);
 }
 
 main {
@@ -24,27 +38,125 @@ main {
     padding: 30px;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-style: oblique;
+    text-align: center;
 }
 
 ul {
     list-style-type: square;
-    padding-left: 30px;
+    list-style-position:inside;
+}
+
+section {
+    border-top: 2px solid rgb(62, 61, 61); 
+    border-left: 2px solid rgb(62, 61, 61); 
+    border-right: 2px solid rgb(164, 150, 150); 
+    border-bottom: 4px double rgb(62, 61, 61); 
+
+    padding: 10px; 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+
+    background-image: url('E:/projekty git 1/ai-uni-lab/lab1/pictures/pexels-tlo3-p2.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.7); 
+    background-blend-mode: overlay; 
+    font-size: 18px;
+    text-align: center; 
 }
 
 footer {
-    background-color: #444;
-    color: #eee;
+    border: 5px double rgb(183, 25, 25);
+    background-color: rgb(62, 61, 61);
+    color: rgb(183, 25, 25);
     text-align: right;
-    padding: 20px;
+    padding: 15px;
+}
+
+.destination-images {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 10px; 
+    justify-content: center; 
+}
+.destination-images img {
+    width: 100%; 
+    max-width: 330px; 
+    height: auto; 
+    border-radius: 20px;
+}
+
+.review-images {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 8px; 
+    margin-top: 5px; 
+    justify-content: center; 
+}
+.review-images img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 10px;
+    border: dotted rgb(183, 25, 25);
 }
 
 a {  /* kolor linku */
-    color: rgb(237, 18, 18); 
+    color:rgb(183, 25, 25);
     text-decoration: white;
+    text-transform: uppercase;
+    font-size: large;
+    border: solid rgb(183, 25, 25);
 }
 a:hover {
-    color:  #bec660;
-}
-a:visited {
     color: rgba(128, 9, 158);
+}
+
+@media (max-width: 375px) {
+    header {
+        padding: 30px 15px;
+        background-size: cover;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 8px;
+    }
+
+    section {
+        margin-bottom: 8px;
+        padding: 12px;
+    }
+
+    ul {
+        list-style-type: square;
+        list-style-position: inside;
+        padding-left: 0; 
+        text-align: center; 
+    }
+
+    .destination-images img, 
+    .review-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 8px;
+    }
 }
