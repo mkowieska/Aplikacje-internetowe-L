@@ -143,3 +143,8 @@ button:hover {
 .save-task-btn:hover {
     opacity: 0.8;
 }
+
+.highlight {
+    background-color: rgb(255, 215, 55);  
+    font-weight: bold;          
+}

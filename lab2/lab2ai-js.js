@@ -113,23 +113,29 @@ class To_Do_List {
 
     render() {
         const taskList = document.getElementById('task-list');
-        taskList.innerHTML = '';
+        taskList.innerHTML = '';  
 
         const filteredTasks = this.tasks.filter(task => task.name.toLowerCase().includes(this.searchTerm));
 
         filteredTasks.forEach(task => {
+            const highlightedName = this.highlightSearchTerm(task.name);
             const taskItem = document.createElement('li');
             taskItem.classList.add('task-item');
             taskItem.setAttribute('data-id', task.id);
 
             taskItem.innerHTML = `
-                <span class="task-name" onclick="todo.editTask(${task.id})">${task.name}</span>
+                <span class="task-name" onclick="todo.editTask(${task.id})">${highlightedName}</span>
                 <span class="task-deadline">${task.deadline}</span>
                 <button class="delete-task-btn" onclick="todo.deleteTask(${task.id})">Delete</button>
             `;
 
             taskList.appendChild(taskItem);
         });
+    }
+
+    highlightSearchTerm(taskName) {
+        const regex = new RegExp(`(${this.searchTerm})`, 'gi'); // 'g' do globalnego wyszukiwania, 'i' do ignorowania wielkości liter
+        return taskName.replace(regex, '<span class="highlight">$1</span>'); 
     }
 }
 
