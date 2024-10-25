@@ -2,6 +2,7 @@ class To_Do_List {
     constructor() {
         this.tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         this.searchTerm = '';
+        this.editingTaskId = null;  
         this.init();
     }
 
@@ -9,17 +10,6 @@ class To_Do_List {
         this.render();
         document.getElementById('add-task-btn').addEventListener('click', () => this.addTask());
         document.getElementById('search-bar').addEventListener('input', (e) => this.searchTasks(e.target.value));
-
-        document.addEventListener('click', (event) => {
-            if (!event.target.closest('.task-item') && !event.target.classList.contains('save-task-btn')) {
-                this.tasks.forEach(task => {
-                    const taskElement = document.querySelector(`[data-id="${task.id}"] .task-name`);
-                    if (taskElement && taskElement.contentEditable === 'true') {
-                        this.saveChanges(task.id);
-                    }
-                });
-            }
-        });
     }
 
     addTask() {
@@ -52,6 +42,10 @@ class To_Do_List {
     }
 
     editTask(id) {
+        if (this.editingTaskId && this.editingTaskId !== id) {
+            this.saveChanges(this.editingTaskId);  
+        }
+
         const taskItem = document.querySelector(`[data-id="${id}"]`);
         const taskNameElement = taskItem.querySelector('.task-name');
         const taskDeadlineElement = taskItem.querySelector('.task-deadline');
@@ -66,8 +60,10 @@ class To_Do_List {
 
         taskDeadlineElement.innerHTML = `
             <input type="datetime-local" value="${formattedDeadline}"/>
-            <button class="save-task-btn" onclick="todo.saveChanges(${id})">Save</button>
+            <button class="save-task-btn" onclick="todo.saveChanges(${id})">Zapisz</button>
         `;
+
+        this.editingTaskId = id;
     }
 
     saveChanges(id) {
@@ -95,6 +91,8 @@ class To_Do_List {
 
         this.updateLocalStorage();
         this.render();
+
+        this.editingTaskId = null; 
     }
 
     formatDateForInput(deadline) {
@@ -113,7 +111,7 @@ class To_Do_List {
 
     render() {
         const taskList = document.getElementById('task-list');
-        taskList.innerHTML = '';  
+        taskList.innerHTML = '';
 
         const filteredTasks = this.tasks.filter(task => task.name.toLowerCase().includes(this.searchTerm));
 
@@ -126,7 +124,7 @@ class To_Do_List {
             taskItem.innerHTML = `
                 <span class="task-name" onclick="todo.editTask(${task.id})">${highlightedName}</span>
                 <span class="task-deadline">${task.deadline}</span>
-                <button class="delete-task-btn" onclick="todo.deleteTask(${task.id})">Delete</button>
+                <button class="delete-task-btn" onclick="todo.deleteTask(${task.id})">Usuń</button>
             `;
 
             taskList.appendChild(taskItem);
