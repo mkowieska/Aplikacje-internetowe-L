@@ -2,37 +2,36 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     background-image: url('E:/projekty git 1/ai-uni-lab/lab2/pictures/background.jpg');
-    margin: 0;
-    padding: 20px;
+    margin: 0; /* usuwa domyślny margines wokół */
+    padding: 20px; /* odstęp */
 }
 
 .container {
     max-width: 600px;
-    margin: auto;
+    margin: auto; /* centruje kontener w poziomie */
     background: rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 8px;
+    padding: 20px;  
+    border-radius: 8px; /*zaokraglone rogi*/
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+    text-align: center; /* do srodka */
+    color: rgb(71, 53, 53);; 
 }
 
 .task-input {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    display: flex; /* flexbox do ułożenia elementów w rzędzie */
+    justify-content: space-between; /* elementy równomiernie w obrębie kontenera */
 }
 
 input[type="text"],
 input[type="datetime-local"] {
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    flex-grow: 1;
+    padding: 10px;  
+    margin-right: 10px;     
+    border: 1px solid #ddd; /* obwódka wokół pól tekstowych. */
+    border-radius: 4px; 
+    flex-grow: 1; /* rozszerzanie się i wypełnianie dostępną przestrzeń. */
 }
 
 button {
@@ -44,7 +43,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover { /* po najechaniu na przycisk zmniejsza przezroczystość. */
     opacity: 0.8;
 }
 
@@ -78,11 +77,21 @@ button:hover {
     border: none;
     border-radius: 4px;
     padding: 5px 10px;
-    cursor: pointer;
+    cursor: pointer; /* zmienia kursor na wskaźnik po najechaniu */
 }
 
 .delete-btn:hover {
     background-color: #c82333;
+}
+
+.delete-task-btn {
+    background-color: rgb(184, 76, 40);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
 }
 
 #search {
@@ -104,18 +113,9 @@ button:hover {
     display: block;
 }
 
-.delete-task-btn {
-    background-color: rgb(184, 76, 40);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-left: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.delete-task-btn:hover {
-    opacity: 0.8;
+.highlight {
+    background-color: rgb(255, 215, 55); /* podkreslenie */  
+    font-weight: bold; /* pogrubienie */     
 }
 
 #add-task-btn {
@@ -124,12 +124,8 @@ button:hover {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    border-radius: 5px;
     margin-top: 15px; 
-}
-
-#add-task-btn:hover {
-    opacity: 0.8;
+    border-radius: 5px;
 }
 
 .save-task-btn {
@@ -137,16 +133,7 @@ button:hover {
     color: white;
     border: none;
     padding: 5px 10px;
-    margin-left: 5px;
     cursor: pointer;
+    margin-left: 5px;
     border-radius: 5px;
-}
-
-.save-task-btn:hover {
-    opacity: 0.8;
-}
-
-.highlight {
-    background-color: rgb(255, 215, 55);  
-    font-weight: bold;          
 }
