@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* lab3Ccss.css */
+
+/* Map container styling */
+#mapContainer {
+    display: flex;                 /* Use flexbox to align items */
+    justify-content: space-between;/* Space between map and preview */
+    width: 100%;                  /* Full width */
+}
+
+#map {
+    width: 60%;                   /* Width of the map */
+    height: 400px;                /* Height of the map */
+    border: 2px solid #333;       /* Border for map */
+}
+
+.image-preview {
+    width: 35%;                   /* Width of the image preview */
+    height: 400px;                /* Same height as the map */
+    border: 2px solid #333;       /* Border for image preview */
+    background-color: #f5f5f5;    /* Light background */
+    display: flex;                /* Center the image */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;          /* Center vertically */
+}
+
+.image-preview img {
+    max-width: 100%;              /* Scale image to fit */
+    max-height: 100%;             /* Scale image to fit */
+}
+
+/* Puzzle workspace styling */
+#puzzleContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+#puzzlePieces, #puzzleBoard {
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #555;
+    position: relative;
+}
+
+.puzzle-piece {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    cursor: grab;
+    border: 1px solid #333;
+}
+#puzzlePieces {
+    position: relative; /* Ensure the container is positioned relatively */
+    width: 300px; /* Width of the puzzle area */
+    height: 300px; /* Height of the puzzle area */
+    border: 2px solid #000; /* Optional: outline the puzzle area */
+}

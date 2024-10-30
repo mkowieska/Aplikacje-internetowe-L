@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3C: Map Puzzle</title>
+    <link rel="stylesheet" href="lab3Ccss.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!-- Load Leaflet JS here -->
+    <script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<!-- Updated HTML Structure in lab3Chtml.html -->
+<body>
+    <h1>Map Puzzle Game</h1>
+
+    <div id="mapContainer">
+        <div id="map"></div>
+        <div id="imagePreview" class="image-preview"></div> <!-- New image preview section -->
+    </div>
+
+    <!-- Buttons for user actions -->
+    <button id="myLocationBtn">My Location</button>
+    <button id="downloadMapBtn">Download Map</button>
+
+    <!-- Puzzle Workspace -->
+    <div id="puzzleContainer">
+        <div id="puzzlePieces"></div>
+        <div id="puzzleBoard"></div>
+    </div>
+
+    <script src="lab3Cjs.js"></script>
+</body>
+
+</html>
